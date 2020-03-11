@@ -82,12 +82,18 @@ Here are the two notification strings represented before they are renderd:
 
 General notification example:
 ```js
-    fres.message('authenticated_user') // output - 'welcome back!'
+    fres.message('authenticated_user') // outputs - 'welcome back!'
 ```
 
 Template notification example:
 ```js
     const data = { name: 'some-username', age: 18}
-    fres.message('happy_birthday', data) // output - 'happy 18th birthday some-username!'
+    fres.message('happy_birthday', data) // outputs - 'happy 18th birthday some-username!'
 ```
 #### 3. Directives  
+Directives are the server's way of telling a client to do something. To illustrate the relevance of this, let us consider a malicious client that tries to access a user's data by providing a tampered JWT. If we detect that the signature is invalid we can send instructions to the client to clear local storage or make an entry in local storage to block this client from retrying. **Node:** directives are just text send along with the response, it is up to the front-end developer to write logic to handle them. Directives are added to the directives array be the <code>directiveTo(string)</code> method.
+
+```js
+    fres.directiveTo('directive_name') 
+```
+
