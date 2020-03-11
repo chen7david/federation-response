@@ -66,6 +66,6 @@ The <code>payloadTo(any)</code> method takes in one argument of type <code>any</
 
 #####  - message()
 
-The <code>message(string, object)</code> method takes in two arguments. The first is of type string and the second is an optional object. The first argument string should match a notification key in your store file, if a match can't be found it will add a default error to details. The second parameter should only be provided if the notification includes keywords denoted by <code>${this-is-a-key-word}</code> which should be replaced.
+The <code>message(string, object)</code> method takes in two arguments. The first is of type string and the second is an optional object. The first argument string should match a notification key in your store file if a match can't be found it will add a default error to details. The second parameter should only be provided if the corresponding notification is a template notification. Template notifications include placeholder words that are denoted by words enclosed by curly braces preceded by a dollar sign like so: <code>${this-is-a-key-word}</code>. If the data object contains an object with property names matching the keywords, the keywords will be replaced by the matching values in the data object. 
 
 #### 3. Directives  
