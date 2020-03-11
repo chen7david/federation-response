@@ -42,7 +42,7 @@ Response {
 }
 ```
 ### API Documentation
-In this section, we will demonstrate how to use this module. for the remainder of this section, we will assume that fres has already been instantiated as illustrated below.
+In this section, we will demonstrate how to use this module. for the remainder of this section, we will assume that <code>fres</code> has already been instantiated as illustrated below.
 ```js
 const storefile = require('./store.json')
 const { Response } = require('federation-response')
@@ -51,7 +51,7 @@ const fres = new Response(storefile)
 ```
 #### 1. Payload
 
-##### payloadTo()
+#####  - payloadTo()
 
 The <code>payloadTo(any)</code> method takes in one argument of type <code>any</code>. The payloadTo method is used to set the payload attribute of your fres object. **Note:** if this method is called more than once on the <code>fres</code> instance, previously loaded payload data will be overwritten.
 ```js
