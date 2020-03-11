@@ -137,3 +137,66 @@ Makes the request ready to be dispatched by removing operational content.
 #####  - throw()
 
 Throws an error with the content of the object.
+
+
+#### 5. Some More Examples
+
+```js
+const storefile = require('./store.json')
+const { Response } = require('federation-response')
+
+const fres = new Response(storefile)
+
+let fres = new Response(store)
+    .payloadTo({user:{id:1}, roles:[1,2,3]})
+    .message('invalid_password')
+    .message('authenticated_user')
+    .message('authenticated_user', {username: 'some-cool-name'})
+    .message({first:'custom message'})
+    .messageTo({message:'this is a custom message'})
+    .done()
+```
+
+The code above would yield teh response below:
+```js
+Response {
+  id: 3033,
+  isFederationResponse: true,
+  status: null,
+  lang: 'en',
+  payload: { user: { id: 1 }, roles: [ 1, 2, 3 ] },
+  details: [
+    {
+      code: 'invalid_password',
+      status: 422,
+      state: 'validation',
+      key: 'password',
+      message: 'the password you entered is invalid'
+    },
+    {
+      code: 'authenticated_user',
+      status: 200,
+      state: 'info',
+      key: '',
+      message: 'welcome back ${username}!'
+    },
+    {
+      code: 'authenticated_user',
+      status: 200,
+      state: 'info',
+      key: '',
+      message: 'welcome back some-cool-name!'
+    },
+    {
+      code: 'invalid_message_code',
+      status: 500,
+      state: 'error',
+      key: '',
+      message: 'the message code you provided could not be found. - 3033'
+    },
+    { message: 'this is a custom message' }
+  ],
+  directives: [],
+  created: '3/11/2020, 4:16:05 PM'
+}
+```

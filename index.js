@@ -79,19 +79,19 @@ class Response {
     }
 }
 
-// let fres = new Response(store)
-//     .payloadTo({user:{id:1}, roles:[1,2,3]})
-//     .message('invalid_password')
-//     .message('authenticated_user')
-//     .message('authenticated_user', {username: 'some-cool-name'})
-//     .message({first:'custom message'})
-//     .messageTo({message:'this is a custom message'})
-//     .done()
-
-    const fres = new Response(store)
+let fres = new Response(store)
     .payloadTo({user:{id:1}, roles:[1,2,3]})
     .message('invalid_password')
+    .message('authenticated_user')
+    .message('authenticated_user', {username: 'some-cool-name'})
+    .message({first:'custom message'})
+    .messageTo({message:'this is a custom message'})
     .done()
+
+    // const fres = new Response(store)
+    // .payloadTo({user:{id:1}, roles:[1,2,3]})
+    // .message('invalid_password')
+    // .done()
 
 dd(fres)
 module.exports = { Response }
