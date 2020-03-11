@@ -95,6 +95,16 @@ Template notification example:
 
 The <code>messageTo</code> method allows you to add a custom unstructured message to the details property. It is advisable to use the same message format as the auto-generated messages to ensure that clients will be able to process your data correctly. 
 
+```js
+    fres.message({
+        state: 'some-custom-notification-name',  
+        status: 200,
+        state: 'error',
+        key: 'some-username', 
+        message: 'some-username', 
+    }) 
+```
+
 #### 3. Directives
 
 #####  - directiveTo()
