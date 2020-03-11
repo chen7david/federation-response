@@ -51,7 +51,7 @@ const fres = new Response(storefile)
 ```
 #### 1. Payload
 
-#####  - payloadTo()
+#####  - payloadTo(any)
 
 The <code>payloadTo(any)</code> method takes in one argument of type <code>any</code>. The payloadTo method is used to set the payload attribute of your fres object. **Note:** if this method is called more than once on the <code>fres</code> instance, previously loaded payload data will be overwritten.
 ```js
@@ -64,7 +64,7 @@ The <code>payloadTo(any)</code> method takes in one argument of type <code>any</
 
 #### 2. Messages 
 
-#####  - message()
+#####  - message(string, object)
 
 The <code>message(string, object)</code> method takes in two arguments. The first is of type string and the second is an optional object. The first argument string should match a notification key in your store file, if a match can't be found it will add a default error to details. The second parameter should only be provided if the notification includes keywords denoted by <code>${this-is-a-key-word}</code> which should be replaced.
 
