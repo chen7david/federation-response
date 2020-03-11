@@ -116,7 +116,7 @@ Directives are the server's way of telling a client to do something. To illustra
 ```
 
 
-#### 3. State Mutation Methods
+#### 4. State Mutation Methods
 
 #####  - statusTo()
 
