@@ -1,10 +1,9 @@
-const dd = (val) => console.log(val)
 const { template } = require('lodash')
-const store = require('./store.json')
+
 class Response {
     
     constructor(storefile = null){
-        if(!store) throw('storefile required!')
+        if(!storefile) throw('storefile required!')
         this.id = Math.floor((Math.random() * 9000) + 1000)
         this.isFederationResponse = true
         this.status = null
@@ -79,19 +78,4 @@ class Response {
     }
 }
 
-let fres = new Response(store)
-    .payloadTo({user:{id:1}, roles:[1,2,3]})
-    .message('invalid_password')
-    .message('authenticated_user')
-    .message('authenticated_user', {username: 'some-cool-name'})
-    .message({first:'custom message'})
-    .messageTo({message:'this is a custom message'})
-    .done()
-
-    // const fres = new Response(store)
-    // .payloadTo({user:{id:1}, roles:[1,2,3]})
-    // .message('invalid_password')
-    // .done()
-
-dd(fres)
 module.exports = { Response }

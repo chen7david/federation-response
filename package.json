@@ -1,6 +1,6 @@
 {
   "name": "federation-response",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "response object that complies with api-federation's standards.",
   "main": "index.js",
   "scripts": {
