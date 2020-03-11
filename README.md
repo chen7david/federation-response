@@ -70,22 +70,22 @@ The <code>message(string, object)</code> method takes in two arguments. The firs
 
 Let us consider the example below to help us better understand the conditions explained above. For this example we will assume the following:
 - storefile contains two notifications: 
- - <code>happy_birthday</code> s
+ - <code>happy_birthday</code>
  - <code>authenticated_user</code>
 - happy_birthday is a template notification, which means that it contains replaceable keywords.
 
-here are the two notification strings represented before they are renderd.
+Here are the two notification strings represented before they are renderd:
 ```js
     let happy_birthday = 'happy ${age}th birthday ${name}!'
     let authenticated_user = 'welcome back!'
 ```
 
-general notification example
+General notification example:
 ```js
     fres.message('authenticated_user') // output - 'welcome back!'
 ```
 
-template notification example
+Template notification example:
 ```js
     const data = { name: 'some-username', age: 18}
     fres.message('happy_birthday', data) // output - 'happy 18th birthday some-username!'
