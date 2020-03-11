@@ -68,4 +68,26 @@ The <code>payloadTo(any)</code> method takes in one argument of type <code>any</
 
 The <code>message(string, object)</code> method takes in two arguments. The first is of type string and the second is an optional object. The first argument string should match a notification key in your store file if a match can't be found it will add a default error to details. The second parameter should only be provided if the corresponding notification is a template notification. Template notifications include placeholder words that are denoted by words enclosed by curly braces preceded by a dollar sign like so: <code>${this-is-a-key-word}</code>. If the data object contains an object with property names matching the keywords, the keywords will be replaced by the matching values in the data object. 
 
+Let us consider the example below to help us better understand the conditions explained above. For this example we will assume the following:
+- storefile contains two notifications: 
+ - <code>happy_birthday</code> s
+ - <code>authenticated_user</code>
+- happy_birthday is a template notification, which means that it contains replaceable keywords.
+
+here are the two notification strings represented before they are renderd.
+```js
+    let happy_birthday = 'happy ${age}th birthday ${name}!'
+    let authenticated_user = 'welcome back!'
+```
+
+general notification example
+```js
+    fres.message('authenticated_user') // output - 'welcome back!'
+```
+
+template notification example
+```js
+    const data = { name: 'some-username', age: 18}
+    fres.message('happy_birthday', data) // output - 'happy 18th birthday some-username!'
+```
 #### 3. Directives  
