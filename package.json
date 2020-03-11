@@ -1,0 +1,25 @@
+{
+  "name": "federation-response",
+  "version": "1.0.0",
+  "description": "response object that complies with api-federation's standards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chen7david/federation-response.git"
+  },
+  "keywords": [
+    "response"
+  ],
+  "author": "David M.Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chen7david/federation-response/issues"
+  },
+  "homepage": "https://github.com/chen7david/federation-response#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
