@@ -41,5 +41,15 @@ Response {
   created: '3/11/2020, 2:12:26 PM'
 }
 ```
-### 2. API 
-Federation-Response has the following 
+### API Documentation
+In this section, we will demonstrate how to use this module. for the remainder of this section, we will assume that fres has already been instantiated as illustrated below.
+```js
+const storefile = require('./store.json')
+const { Response } = require('federation-response')
+
+const fres = new Response(storefile)
+```
+#### 1. Payload
+
+#### 2. Messages 
+#### 3. Directives  
