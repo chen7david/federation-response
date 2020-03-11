@@ -90,7 +90,15 @@ Template notification example:
     const data = { name: 'some-username', age: 18}
     fres.message('happy_birthday', data) // outputs - 'happy 18th birthday some-username!'
 ```
-#### 3. Directives  
+
+#####  - messageTo()
+
+The <code>messageTo</code> method allows you to add a custom unstructured message to the details property. It is advisable to use the same message format as the auto-generated messages to ensure that clients will be able to process your data correctly. 
+
+#### 3. Directives
+
+#####  - directiveTo()
+
 Directives are the server's way of telling a client to do something. To illustrate the relevance of this, let us consider a malicious client that tries to access a user's data by providing a tampered JWT. If we detect that the signature is invalid we can send instructions to the client to clear local storage or make an entry in local storage to block this client from retrying. **Node:** directives are just text send along with the response, it is up to the front-end developer to write logic to handle them. Directives are added to the directives array be the <code>directiveTo(string)</code> method.
 
 ```js
