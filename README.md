@@ -6,7 +6,7 @@ Lets complete the stepts in the list below to get us started:
 - require in your <code>store.js</code> file as <code>storefile</code>.
 - run <code>$ npm install federation-response</code> in your project directory.
 - require Response from federation-response.
-- pass in the <code>storefile</code> as an argumnet to Response and new to create a new Response instance.
+- pass in the <code>storefile</code> as an argument to Response and new to create a new Response instance.
 The code below illustrates the steps above:
 ```js
 const storefile = require('./store.json')
