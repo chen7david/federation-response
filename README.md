@@ -1,7 +1,7 @@
 # Federation-Response (FR)
 The Federation Response module is a predefined response structure that is used by APIs in the API-Federation Ecosystem (AFE) to serve responses that conform to the R1-Response structure as defined by AFE.
 
-### 1. Getting Started
+#### 1. Getting Started
 Lets complete the stepts in the list below to get us started:
 - require in your <code>store.js</code> file as <code>storefile</code>.
 - run <code>$ npm install federation-response</code> in your project directory.
@@ -40,3 +40,5 @@ Response {
   created: '3/11/2020, 2:12:26 PM'
 }
 ```
+### 2. API 
+Federation-Response has the following 
