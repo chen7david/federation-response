@@ -115,3 +115,25 @@ Directives are the server's way of telling a client to do something. To illustra
     fres.directiveTo('directive_name') 
 ```
 
+
+#### 3. State Mutation Methods
+
+#####  - statusTo()
+
+Sets the status of the response to the provided integer.
+
+#####  - langTo()
+
+Sets the language of the response to the provided language if it is in the applications project scope, otherwise, it defaults to English. 
+
+#####  - isSilent()
+
+This indicates to the client that this message should not be displayed to the user.
+
+#####  - done()
+
+Makes the request ready to be dispatched by removing operational content.
+
+#####  - throw()
+
+Throws an error with the content of the object.
