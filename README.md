@@ -1,5 +1,5 @@
 # Federation-Response (FR)
-The Federation Response module is a predefined response structure that is used by APIs in the API-Federation Ecosystem (AFE) to serve responses that conform to the R1-Response structre as defined by AFE.
+The Federation Response module is a predefined response structure that is used by APIs in the API-Federation Ecosystem (AFE) to serve responses that conform to the R1-Response structure as defined by AFE.
 
 ### 1. Getting Started
 You only need to do two things if you want to use federation-response in your project:
