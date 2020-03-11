@@ -2,11 +2,11 @@
 The Federation Response module is a predefined response structure that is used by APIs in the API-Federation Ecosystem (AFE) to serve responses that conform to the R1-Response structure as defined by AFE.
 
 ### 1. Getting Started
-You only need to do two things if you want to use federation-response in your project:
-- require in your <code>store.js</code> as storefile
-- npm install federation-response in your project
-- require Response from federation-response
-- pass in the storefile as an argumnet to Response and new to create a new Response instance
+Lets complete the stepts in the list below to get us started:
+- require in your <code>store.js</code> file as <code>storefile</code>.
+- run <code>$ npm install federation-response</code> in your project directory.
+- require Response from federation-response.
+- pass in the <code>storefile</code> as an argumnet to Response and new to create a new Response instance.
 The code below illustrates the steps above:
 ```js
 const storefile = require('./store.json')
