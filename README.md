@@ -49,9 +49,9 @@ const { Response } = require('federation-response')
 
 const fres = new Response(storefile)
 ```
-#### 1. Payload
+#### 1. payloadTo()
 
-The <code>payloadTo(any)</code> method takes in one argument of type <code>any</code>. The payloadTo function is used to set the payload attribute of your fres object. **Note:** if this method is called more than once on the <code>fres</code> instance, previously loaded payload data will be overwritten.
+The <code>payloadTo(any)</code> method takes in one argument of type <code>any</code>. The payloadTo method is used to set the payload attribute of your fres object. **Note:** if this method is called more than once on the <code>fres</code> instance, previously loaded payload data will be overwritten.
 ```js
     const data = [
         { id: 1, usernmae:'some-username'}
